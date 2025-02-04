@@ -1,24 +1,24 @@
 <.header>
-  Listing Tasks
+  タスクリスト
   <:actions>
     <.link href={~p"/tasks/new"}>
-      <.button>New Tasks</.button>
+      <.button>タスクを作成する</.button>
     </.link>
   </:actions>
 </.header>
 
 <.table id="tasks" rows={@tasks_collection} row_click={&JS.navigate(~p"/tasks/#{&1}")}>
-  <:col :let={tasks} label="Title">{tasks.title}</:col>
-  <:col :let={tasks} label="Description">{tasks.description}</:col>
+  <:col :let={tasks} label="タイトル">{tasks.title}</:col>
+  <:col :let={tasks} label="内容">{tasks.description}</:col>
   <:action :let={tasks}>
     <div class="sr-only">
-      <.link navigate={~p"/tasks/#{tasks}"}>Show</.link>
+      <.link navigate={~p"/tasks/#{tasks}"}>確認</.link>
     </div>
-    <.link navigate={~p"/tasks/#{tasks}/edit"}>Edit</.link>
+    <.link navigate={~p"/tasks/#{tasks}/edit"}>編集</.link>
   </:action>
   <:action :let={tasks}>
-    <.link href={~p"/tasks/#{tasks}"} method="delete" data-confirm="Are you sure?">
-      Delete
+    <.link href={~p"/tasks/#{tasks}"} method="delete" data-confirm="本当に削除しますか？">
+      削除
     </.link>
   </:action>
 </.table>
