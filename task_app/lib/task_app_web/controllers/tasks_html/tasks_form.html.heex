@@ -1,10 +1,10 @@
 <.simple_form :let={f} for={@changeset} action={@action}>
   <.error :if={@changeset.action}>
-    Oops, something went wrong! Please check the errors below.
+    保存できませんでした　フォームのエラーを確認してください
   </.error>
-  <.input field={f[:title]} type="text" label="Title" />
-  <.input field={f[:description]} type="text" label="Description" />
+  <.input field={f[:title]} type="text" label="タイトル" />
+  <.input field={f[:description]} type="text" label="内容" />
   <:actions>
-    <.button>Save Tasks</.button>
+    <.button>保存</.button>
   </:actions>
 </.simple_form>
