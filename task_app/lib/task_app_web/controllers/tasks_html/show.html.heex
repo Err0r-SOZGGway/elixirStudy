@@ -1,16 +1,16 @@
 <.header>
-  Tasks {@tasks.id}
-  <:subtitle>This is a tasks record from your database.</:subtitle>
+  タスク {@tasks.id}
+  <:subtitle>データベースに登録されているタスク情報</:subtitle>
   <:actions>
     <.link href={~p"/tasks/#{@tasks}/edit"}>
-      <.button>Edit tasks</.button>
+      <.button>タスク編集</.button>
     </.link>
   </:actions>
 </.header>
 
 <.list>
-  <:item title="Title">{@tasks.title}</:item>
-  <:item title="Description">{@tasks.description}</:item>
+  <:item title="タイトル">{@tasks.title}</:item>
+  <:item title="内容">{@tasks.description}</:item>
 </.list>
 
-<.back navigate={~p"/tasks"}>Back to tasks</.back>
+<.back navigate={~p"/tasks"}>タスク一覧に戻る</.back>

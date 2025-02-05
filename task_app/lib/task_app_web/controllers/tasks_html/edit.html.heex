@@ -1,8 +1,8 @@
 <.header>
-  Edit Tasks {@tasks.id}
-  <:subtitle>Use this form to manage tasks records in your database.</:subtitle>
+  タスク編集 {@tasks.id}
+  <:subtitle>タスクをこのフォームで入力した情報で更新します</:subtitle>
 </.header>
 
 <.tasks_form changeset={@changeset} action={~p"/tasks/#{@tasks}"} />
 
-<.back navigate={~p"/tasks"}>Back to tasks</.back>
+<.back navigate={~p"/tasks"}>タスク一覧に戻る</.back>
